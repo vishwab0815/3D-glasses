@@ -1,0 +1,33 @@
+Bro, I've sent you these 4 Python files:
+
+1. `assistant_test.py`
+2. `server.py`
+3. `convert_audio.py`
+4. `receive_audio.py`
+
+Please use these files as the starting point and help complete the voice assistant project.
+
+**Project goal:**
+ESP32-S3 + INMP441 microphone + MAX98357A speaker.
+
+The flow should be:
+1. ESP32 listens automatically.
+2. Detects when I start speaking.
+3. Records my speech until I finish (around 2 seconds of silence, with a maximum utterance length of 10 seconds).
+4. Sends the recording to my laptop.
+5. Laptop runs Groq STT → Groq chat → Groq TTS.
+6. Sends the generated audio back to ESP32.
+7. ESP32 plays the reply and automatically returns to listening.
+
+**Please do this:**
+- First inspect all 4 Python files and understand what is already working.
+- Use **your own Groq API key**, configured privately on your laptop. Don't use or ask for my API key.
+- Install the required Python packages and test the backend.
+- Check the existing ESP32 Arduino sketch and preserve the working mic, speaker, Wi-Fi, upload and playback code.
+- Complete automatic speech detection and silence-based recording without breaking the working pipeline.
+- Test each stage, then test the complete conversation.
+- Configure the server URL using your laptop's own Wi-Fi IP address.
+
+I will share our ChatGPT conversation too, which contains the wiring details and troubleshooting history.
+
+Please keep backups of the working code before changing anything.
